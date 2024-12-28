@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <title>File Reader Example</title>
+        <style>
+            textarea {
+                width: 100%;
+                height: 200px; 
+                margin-bottom: 10px;
+            }
+        </style>
+    </head>
+    <body>
+
+        <textarea id="textInput"></textarea>
+        <input type="file" id="fileInput" />
+
+        <button onclick="saveFile()">Save</button>
+        <button onclick="loadFile()">Load</button>
+        <a id="downloadLink" style="display: none;">Download</a>
+        <script src="/scripts/fileReader.js"></script>
+        <!-- <script src="/scripts/asyncJs.js"></script> -->
+    </body>
+</html>

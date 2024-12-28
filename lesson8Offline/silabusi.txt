@@ -1,0 +1,3 @@
+·ასინქრონული პროგრამირება ჯავასკრიპტში, (Async javascript)
+·რას წარმოადგენს მოვლენათა მარყუჟი (event loop)
+·callbacks და promises
