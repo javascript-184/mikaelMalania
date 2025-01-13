@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            height: 100vh;
+            width: 100%;
+            background: #0f2027; /* fallback for old browsers */
+            background: linear-gradient(to right,#2c5364, #203a43, #0f2027);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: #fff;
+        }
+
+        #title {
+            text-align: center;
+            font-size: 36px;
+            font-family:Verdana, sans-serif
+        }
+
+        .PicAndBtn {
+            display: flex;
+            gap: 30px;
+        }
+
+        
+        .PicAndBtn button {
+            background: #FF4742;
+            border: 1px solid #FF4742;
+            border-radius: 6px;
+            box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
+            box-sizing: border-box;
+            color: #FFFFFF;
+            cursor: pointer;
+            display: inline-block;
+            font-family: nunito,roboto,proxima-nova,"proxima nova",sans-serif;
+            font-size: 16px;
+            font-weight: 800;
+            line-height: 16px;
+            min-height: 40px;
+            outline: 0;
+            padding: 12px 14px;
+            text-align: center;
+            text-rendering: geometricprecision;
+            text-transform: none;
+            user-select: none;
+            -webkit-user-select: none;
+            touch-action: manipulation;
+            vertical-align: middle;
+            }
+
+        .PicAndBtn button:hover,
+        .PicAndBtn button:active {
+        background-color: initial;
+        background-position: 0 0;
+        color: #FF4742;
+        }
+
+        .PicAndBtn button:active {
+        opacity: .5;
+        }
+
+        .SearchBar {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+            bottom: 240px;
+        }
+
+        table {
+            color: #fff;
+            border-collapse: collapse;
+            width: 50%;
+            margin-top: 20px;
+            border: 1px solid #fff;
+            margin-right: auto;
+        }
+
+        th, td {
+            padding: 8px;
+            text-align: center;
+            border: 1px solid #fff;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="SearchBar">
+        <h3 id="title">US Zip code searcher</h3>
+    
+        <div class="PicAndBtn">
+            <input id="searchTerm" placeholder="Enter a search query">
+            <button onclick="Searcher()">Search</button>
+        </div>
+
+    </div>
+
+    <script>
+        async function Searcher() {
+            const searchTerm = document.getElementById("searchTerm").value.trim();
+            const searchBar = document.querySelector(".SearchBar");
+
+            let apiData = await fetch(`https://api.zippopotam.us/us/${searchTerm}`)
+            apiData = await apiData.json();
+            let newTable = document.createElement('table');
+
+            let tableContent = `
+            <table>
+                <th>
+                    <td>post code</td>
+                    <td>country</td>
+                    <td>country abbreviation</td>
+                    <td>place name</td>
+
+                </th>
+
+                <tr>
+                    <td>
+                        ${apiData["post code"]}
+                    </td>
+
+                    <td>
+                        ${apiData["country"]}
+                    </td>
+
+                    <td>
+                        ${apiData["country abbreviation"]}
+                    </td>
+
+                    <td>
+                        ${apiData["places"][0]["place name"]}
+                    </td>
+                </tr>
+            </table>
+            `
+            newTable.innerHTML = tableContent;
+
+            searchBar.appendChild(newTable);
+        }
+
+
+    </script>
+</body>
+</html>

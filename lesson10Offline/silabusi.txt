@@ -1,0 +1,4 @@
+·ასინქრონული ფუნქციები, Async/await
+·პრაქტიკული მაგალითები AJAX
+·Local Storage
+·Session Storage
