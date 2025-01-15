@@ -1,0 +1,55 @@
+<html>
+    <head>
+        <style>
+            .filterDiv {
+            float: left;
+            background-color: #2196F3;
+            color: #ffffff;
+            width: 100px;
+            line-height: 100px;
+            text-align: center;
+            margin: 2px;
+            /* display: none; */
+            }
+
+            .show {
+            display: block;
+            }
+
+            .container {
+            margin-top: 20px;
+            overflow: hidden;
+            }
+
+            input {
+                background-color: white;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+                padding: 8px;
+                box-sizing: border-box;
+            }
+        </style>
+    </head>
+    <body>
+        
+        <h2>Filter DIV Elements</h2>
+        <input id="userInput" placeholder="Search Here" onkeyup="searchContact()"> 
+        <div class="container">
+            <div class="filterDiv cars">BMW</div>
+            <div class="filterDiv colors fruits">Orange</div>
+            <div class="filterDiv cars">Volvo</div>
+            <div class="filterDiv colors">Red</div>
+            <div class="filterDiv cars">Ford</div>
+            <div class="filterDiv colors">Blue</div>
+            <div class="filterDiv animals">Cat</div>
+            <div class="filterDiv animals">Dog</div>
+            <div class="filterDiv fruits">Melon</div>
+            <div class="filterDiv fruits animals">Kiwi</div>
+            <div class="filterDiv fruits">Banana</div>
+            <div class="filterDiv fruits">Lemon</div>
+            <div class="filterDiv animals">Cow</div>
+        </div>
+
+        <script src="./scripts/filterV2.js"></script>
+    </body>
+</html>

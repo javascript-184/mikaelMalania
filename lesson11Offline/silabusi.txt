@@ -1,0 +1,5 @@
+·დეველოპერის ხელსაწყოები (Dev tools)
+·More about Console and performance
+·First paint and first contentful paint
+·პრაქტიკული სამუშაოები (სლაიდერები ავტომატური, ხელით გადამრთველი და ფილტრატორები)
+·საფინალო პროექტის განხილვა და არჩევა
