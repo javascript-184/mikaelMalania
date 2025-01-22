@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Floating UI Tutorial</title>
+    <style>
+        body {
+            font-family: sans-serif;
+          }
+          
+          #tooltip {
+            position: absolute;
+            background: #222;
+            color: white;
+            font-weight: bold;
+            padding: 5px;
+            border-radius: 4px;
+            font-size: 90%;
+            pointer-events: none;
+            top: 0;
+            left: 0;
+          }
+          
+    </style>
+  </head>
+  <body>
+    <button id="button" aria-describedby="tooltip">
+      My button
+    </button>
+    <div id="tooltip" role="tooltip">My tooltip</div>
+
+    <script src="./scripts/floatingUI.js" type="module"></script>
+  </body>
+</html>

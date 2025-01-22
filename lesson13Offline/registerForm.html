@@ -1,0 +1,31 @@
+<html>
+    <head></head>
+    <body>
+
+        <div id="registerForm">
+            <h1>Register</h1>
+            
+            <input id="firstName" type="text" placeholder="Enter your name">
+            <br>
+            <br>
+            <input id="lastName" type="text" placeholder="Enter your last name">
+            <br>
+            <br>
+            <input id="username" type="text" placeholder="Enter your username">
+            <br>
+            <br>
+            <input id="password" type="text" placeholder="Enter your password">
+            <br>
+            <br>
+            <span>Save Password?</span>    <input type="checkbox" id="savePass" value="false">
+            <br>
+            <br>
+            <button onclick="handleRegistration()" type="submit">Register now</button>
+
+            <p id="error"></p>
+            <div id="result"></div>
+        </div>
+
+        <script  src="/scripts/registerForm.js"></script>
+    </body>
+</html>
